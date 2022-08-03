@@ -32,7 +32,7 @@ public class NewOrderMain {
     //Configurações para conexão com o kafka server
     private static Properties properties() {
         var properties = new Properties();
-        properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.22.199.238:9092"); //Ip e Porta do Kafka Server
+        properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092"); //Ip e Porta do Kafka Server
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()); //Serializa a chave utilizando String
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()); //Serializa o value utilizando String
         return properties;
