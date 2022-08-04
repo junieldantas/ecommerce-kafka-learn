@@ -18,7 +18,7 @@ public class NewOrderMain {
         var key = "ORDER_123"; //Order Number
         var value = "321,12320"; //Client Number, Valor
 
-        var recordTopic = new ProducerRecord<String, String>("ECOMMERCE_NEW_ORDER", key, value); //Cria Producer para Topico ECOMMERCE_NEW_ORDER
+        var recordTopic = new ProducerRecord<>("ECOMMERCE_NEW_ORDER", key, value); //Cria Producer para Topico ECOMMERCE_NEW_ORDER
         //send(p1, p2) - Envia para o tópico, onde p1 é o registro e p2 é um callback a ser executado ao finalizar o envio / get() aguarda o retorno
         producer.send(recordTopic, (data, ex) -> {
             if (ex != null) {
